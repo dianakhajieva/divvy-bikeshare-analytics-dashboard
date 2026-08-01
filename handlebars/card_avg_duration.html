@@ -1,0 +1,41 @@
+<div style="
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.06);
+  font-family: 'Inter', -apple-system, sans-serif;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #eaecf0;
+">
+  <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #10b981, #06b6d4);"></div>
+
+  {{#each data}}
+  <div style="font-size: 40px; font-weight: 700; color: #0f172a; line-height: 1; letter-spacing: -0.02em;">
+    {{division (floor (sum (multiplication this.avg_duration 10) 0.5)) 10}} <span style="font-size: 20px; font-weight: 600; color: #64748b;">min</span>
+  </div>
+
+  <div style="margin-top: 14px;">
+    {{#if (gt this.current_month_duration this.prev_month_duration)}}
+      <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 4px 10px; border-radius: 8px;">
+        ▲ {{floor (sum (multiplication (division (difference this.current_month_duration this.prev_month_duration) this.prev_month_duration) 100) 0.5)}}%
+        <span style="color: #64748b; font-weight: 500;">vs last month</span>
+      </span>
+    {{else if (lt this.current_month_duration this.prev_month_duration)}}
+      <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; padding: 4px 10px; border-radius: 8px;">
+        ▼ {{floor (sum (multiplication (division (difference this.prev_month_duration this.current_month_duration) this.prev_month_duration) 100) 0.5)}}%
+        <span style="color: #64748b; font-weight: 500;">vs last month</span>
+      </span>
+    {{else}}
+      <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 10px; border-radius: 8px;">
+        ▬ 0%
+        <span style="color: #94a3b8; font-weight: 500;">vs last month</span>
+      </span>
+    {{/if}}
+  </div>
+  {{/each}}
+</div>

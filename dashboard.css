@@ -1,0 +1,82 @@
+/* ===== Dashboard canvas  ===== */
+.dashboard-content,
+div[class*="dashboard-content"] {
+  background: #ffffff !important;
+}
+
+.header-with-actions .ant-tag,
+span[class*="ant-tag-filled"] {
+  color: #15803d !important;
+  background: #f0fff4 !important;
+}
+/* ===== Header bar ===== */
+.header-with-actions {
+  background: linear-gradient(90deg, #2563eb 0%, #0d9488 100%) !important;
+}
+
+/* Title input */
+input[class*="dynamic-title-input"] {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.header-with-actions span,
+.header-with-actions .header-title,
+.header-with-actions button svg {
+  color: #ffffff !important;
+}
+
+/* ===== Filter bar row ===== */
+div[class*="superset-11fhzu6"] {
+  background: linear-gradient(90deg, #2563eb 0%, #0d9488 100%) !important;
+}
+
+div[class*="superset-11fhzu6"] span,
+div[class*="superset-11fhzu6"] label,
+div[class*="superset-11fhzu6"] .ant-select-selection-item {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* ===== Chart cards ===== */
+.dashboard-component-chart-holder,
+.dashboard-component-chart-holder .chart-container,
+.dashboard-component-chart-holder .panel-body,
+.dashboard-component-chart-holder .superset-legacy-chart-container,
+.dashboard-component-chart-holder .slice_container {
+  background: #ffffff !important;
+}
+
+.dashboard-component-chart-holder {
+  border-radius: 20px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+  overflow: hidden;
+}
+
+.dashboard-component-chart-holder .chart-container {
+  border-radius: 20px !important;
+  border: none !important;
+}
+
+/* ===== Chart titles ===== */
+.chart-header .header-title,
+.chart-header .header {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+/* ===== Spacing ===== */
+.dashboard-component {
+  margin: 10px !important;
+}
+
+/* ===== Tabs ===== */
+.dashboard-component-tabs .ant-tabs-tab-active {
+  color: #0d9488 !important;
+}
+.dashboard-component-tabs .ant-tabs-ink-bar {
+  background-color: #0d9488 !important;
+}
