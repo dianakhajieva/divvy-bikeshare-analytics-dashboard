@@ -2,7 +2,7 @@
 
 An interactive Apache Superset dashboard analyzing ~1.4M Chicago Divvy bike-share trips (Mar–May 2026) to compare how casual riders and annual members use the system.
 
-![Dashboard](screenshots/dashboard-full.png)
+![Dashboard](screenshots/dashboard-full.jpg)
 
 ## Research Question
 
